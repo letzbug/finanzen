@@ -12,16 +12,24 @@
   --text-soft: #c7d9f2;
 }
 
-* { box-sizing: border-box; }
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  height: 100%;
+  overflow-x: hidden;
+}
 
 body {
-  margin: 0;
   font-family: "Inter", "Helvetica Neue", Arial, sans-serif;
   color: var(--text-main);
   background: transparent;
 }
 
-/* 🔥 Hintergrund FIX über ganzen Screen */
+/* Fullscreen Background */
 body::before {
   content: "";
   position: fixed;
@@ -32,14 +40,16 @@ body::before {
     url("UP_Money.jpg") center / cover no-repeat;
 }
 
+/* Hero */
 .hero {
-  min-height: 100vh;
+  min-height: 100svh;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 4.5rem 1.5rem;
+  padding: clamp(2rem, 4vh, 4.5rem) 1.5rem;
 }
 
+/* Content */
 .hero-content {
   max-width: 1100px;
   text-align: center;
@@ -47,34 +57,50 @@ body::before {
 }
 
 .hero h1 {
-  font-size: clamp(2.9rem, 5.2vw, 4.2rem);
+  font-size: clamp(3rem, 5.5vw, 4.3rem);
   margin-bottom: 2rem;
   font-weight: 700;
+  letter-spacing: 0.5px;
 }
 
 .hero p {
-  font-size: clamp(1.35rem, 2.2vw, 1.8rem);
+  font-size: clamp(1.4rem, 2.3vw, 1.85rem);
   line-height: 1.85;
   color: var(--text-soft);
 }
 
+/* Animation */
 @keyframes fadeUp {
-  from { opacity: 0; transform: translateY(25px); }
-  to   { opacity: 1; transform: translateY(0); }
+  from {
+    opacity: 0;
+    transform: translateY(25px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 </style>
 </head>
 
 <body>
+
 <section class="hero">
   <div class="hero-content">
-    <h1>Gesond Finanzen - besser liewen: D'Grondlagen vun der perséinlecher Finanzplanung</h1>
+
+    <h1>
+      Gesond Finanzen - besser liewen:  
+      D'Grondlagen vun der perséinlecher Finanzplanung
+    </h1>
 
     <p>
       Iwwerschëldung ass kee Randphenomen, mee en déifgräifende gesellschaftleche Problem, deen dacks nëmmen als Spëtzt vum Äisbierg siichtbar gëtt. Vill Mënsche liewen ënner onséchere finanzielle Konditiounen a lafen Gefor, séier an eng schwiereg Situatioun ze geroden. Fir deem entgéintzewierken, ass et entscheedend, d’finanziell Wuelbefannen ze stäerken an d’Kompetenze ronderëm Suen a Budget besser ze vermëttelen.
       Dëse Workshop gëtt vun der Ligue médico-sociale an Zesummenaarbecht mat der UniPop organiséiert.
     </p>
+
   </div>
 </section>
+
 </body>
 </html>
+
