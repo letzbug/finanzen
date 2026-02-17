@@ -1,30 +1,27 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Gesond Finanzen</title>
 
 <style>
 :root {
   --bg-main: #071b3a;
-  --bg-overlay: rgba(7, 27, 58, 0.85);
+  /* Overlay transparenter, damit der blaue Balken nicht “drüberliegt” */
+  --bg-overlay: rgba(7, 27, 58, 0.55);
   --accent: #4fd1c5;
   --text-main: #ffffff;
   --text-soft: #c7d9f2;
 }
 
-* {
-  box-sizing: border-box;
-}
+* { box-sizing: border-box; }
 
 body {
   margin: 0;
   font-family: "Inter", "Helvetica Neue", Arial, sans-serif;
-  background: linear-gradient(
-      var(--bg-overlay),
-      var(--bg-overlay)
-    ),
+  background:
+    linear-gradient(var(--bg-overlay), var(--bg-overlay)),
     url("UP_Money.jpg") center / cover no-repeat;
   color: var(--text-main);
 }
@@ -34,27 +31,27 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 4rem 1.5rem;
+  padding: 4.5rem 1.5rem;
 }
 
 .hero-content {
-  max-width: 1000px;
+  max-width: 1100px;
   text-align: center;
   animation: fadeUp 1.2s ease forwards;
 }
 
 .hero h1 {
-  font-size: clamp(2.6rem, 5vw, 3.6rem);
-  margin-bottom: 1.8rem;
+  font-size: clamp(2.9rem, 5.2vw, 4.2rem);
+  margin: 0 0 2rem;
   font-weight: 700;
   letter-spacing: 0.5px;
 }
 
 .hero p {
-  font-size: 1.35rem;
-  line-height: 1.8;
+  font-size: clamp(1.35rem, 2.2vw, 1.8rem);
+  line-height: 1.85;
   color: var(--text-soft);
-  margin-bottom: 3rem;
+  margin: 0;
 }
 
 .highlight {
@@ -62,45 +59,9 @@ body {
   font-weight: 600;
 }
 
-.cta-group {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 16px;
-}
-
-.cta {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.8rem;
-  padding: 1.1rem 2.2rem;
-  border: 2px solid var(--accent);
-  border-radius: 50px;
-  color: var(--accent);
-  text-decoration: none;
-  font-weight: 600;
-  font-size: 1.15rem;
-  transition: all 0.3s ease;
-}
-
-.cta:hover {
-  background: var(--accent);
-  color: #031225;
-}
-
-.cta span {
-  font-size: 1.4rem;
-}
-
 @keyframes fadeUp {
-  from {
-    opacity: 0;
-    transform: translateY(25px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+  from { opacity: 0; transform: translateY(25px); }
+  to   { opacity: 1; transform: translateY(0); }
 }
 </style>
 </head>
@@ -111,10 +72,9 @@ body {
     <h1>Gesond Finanzen - besser liewen: D'Grondlagen vun der perséinlecher Finanzplanung</h1>
 
     <p>
-      Iwwerschëldung ass kee Randphenomen, mee en déifgräifende gesellschaftleche Problem, deen dacks nëmmen als Spëtzt vum Äisbierg siichtbar gëtt. Vill Mënsche liewen ënner onséchere finanzielle Konditiounen a lafen Gefor, séier an eng schwiereg Situatioun ze geroden. Fir deem entgéintzewierken, ass et entscheedend, d’finanziell Wuelbefannen ze stäerken an d’Kompetenze ronderëm Suen a Budget besser ze vermëttelen. 
-Dëse Workshop gëtt vun der Ligue médico-sociale an Zesummenaarbecht mat der UniPop organiséiert.
+      Iwwerschëldung ass kee Randphenomen, mee en déifgräifende gesellschaftleche Problem, deen dacks nëmmen als Spëtzt vum Äisbierg siichtbar gëtt. Vill Mënsche liewen ënner onséchere finanzielle Konditiounen a lafen Gefor, séier an eng schwiereg Situatioun ze geroden. Fir deem entgéintzewierken, ass et entscheedend, d’finanziell Wuelbefannen ze stäerken an d’Kompetenze ronderëm Suen a Budget besser ze vermëttelen.
+      Dëse Workshop gëtt vun der Ligue médico-sociale an Zesummenaarbecht mat der UniPop organiséiert.
     </p>
-
   </div>
 </section>
 </body>
