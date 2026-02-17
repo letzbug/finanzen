@@ -7,10 +7,7 @@
 
 <style>
 :root {
-  --bg-main: #071b3a;
-  /* Overlay transparenter, damit der blaue Balken nicht “drüberliegt” */
   --bg-overlay: rgba(7, 27, 58, 0.55);
-  --accent: #4fd1c5;
   --text-main: #ffffff;
   --text-soft: #c7d9f2;
 }
@@ -20,14 +17,23 @@
 body {
   margin: 0;
   font-family: "Inter", "Helvetica Neue", Arial, sans-serif;
+  color: var(--text-main);
+  background: transparent;
+}
+
+/* 🔥 Hintergrund FIX über ganzen Screen */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
   background:
     linear-gradient(var(--bg-overlay), var(--bg-overlay)),
     url("UP_Money.jpg") center / cover no-repeat;
-  color: var(--text-main);
 }
 
 .hero {
-  min-height: 90vh;
+  min-height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -42,21 +48,14 @@ body {
 
 .hero h1 {
   font-size: clamp(2.9rem, 5.2vw, 4.2rem);
-  margin: 0 0 2rem;
+  margin-bottom: 2rem;
   font-weight: 700;
-  letter-spacing: 0.5px;
 }
 
 .hero p {
   font-size: clamp(1.35rem, 2.2vw, 1.8rem);
   line-height: 1.85;
   color: var(--text-soft);
-  margin: 0;
-}
-
-.highlight {
-  color: var(--accent);
-  font-weight: 600;
 }
 
 @keyframes fadeUp {
